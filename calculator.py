@@ -1,18 +1,31 @@
 print("====Python Calculator====")
 print("1.Addition \n2.Subtraction \n3.Multiplication \n4.Division \n5.Exit")
 a=int(input("Enter your Choice:"))
-b=int(input("Enter first number:"))
-c=int(input("Enter second number:"))
-if a==1:
-    print("Addition of two numbers is:",b+c)
-elif a==2:
-    print("Subtraction of two numbers is:",b-c)
-elif a==3:
-    print("Multiplication of two numbers is:",b*c)
-elif a==4:
-    print("Division of two numbers is:",b/c)
-elif a==5:
-    print("Exiting...")
-else:
-    print("Invalid Choice")
-print("Thank you for using the calculator!")    
+while a!=5:
+    if a==1:
+        num1=float(input("Enter first number:"))
+        num2=float(input("Enter second number:"))
+        print(num1,"+",num2,"=",num1+num2)
+        break
+    elif a==2:
+        num1=float(input("Enter first number:"))
+        num2=float(input("Enter second number:"))
+        print(num1,"-",num2,"=",num1-num2)
+        break    
+    elif a==3:
+        num1=float(input("Enter first number:"))
+        num2=float(input("Enter second number:"))
+        print(num1,"*",num2,"=",num1*num2)
+        break
+    elif a==4:
+        num1=float(input("Enter first number:"))
+        num2=float(input("Enter second number:"))
+        if num2==0:
+            print("Error! Division by zero.")
+        else:
+            print(num1,"/",num2,"=",num1/num2)
+        break        
+    else:
+        print("Invalid Input")
+        break
+print("Exiting the calculator. Goodbye!")        
